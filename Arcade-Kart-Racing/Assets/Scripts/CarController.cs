@@ -43,8 +43,12 @@ public class CarController : MonoBehaviour
     }
     void Update()
     {
+        float turnRate = Mathf.Abs(Vector3.Dot(rig.velocity.normalized,carModel.forward));
+
+        curYRot += turnInput * turnSpeed * turnRate * Time.deltaTime;
+
         carModel.transform.position = transform.position + startModelOffset;
-        carModel.transform.eulerAngles = new Vector3(0,carModel.eulerAngles.y,0);
+        carModel.transform.eulerAngles = new Vector3(0,curYRot,0);
     }
     public void OnAccelerateInput(InputAction.CallbackContext context)
     {
