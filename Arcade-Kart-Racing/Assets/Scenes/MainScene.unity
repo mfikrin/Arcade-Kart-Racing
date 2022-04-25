@@ -991,6 +991,7 @@ MonoBehaviour:
   - {fileID: 1065787898}
   - {fileID: 777309206}
   positionUpdateRate: 0.1
+  isStartedLap: 1
   playersToBegin: 1
   gameStarted: 0
   lapsToWin: 2

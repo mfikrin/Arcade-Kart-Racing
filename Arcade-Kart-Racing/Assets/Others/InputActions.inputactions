@@ -31,7 +31,7 @@
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "",
                     "action": "Accelerate",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -64,7 +64,7 @@
                     "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Controller",
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -81,30 +81,8 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "e7cde653-2e9a-4710-9ae5-20082f987931",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Turn",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "c7e1bb07-4d6a-4918-8507-eaa5e2cb844d",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Turn",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "1D Axis",
-                    "id": "f164ebac-1835-4189-a427-3eec36f2bb12",
+                    "id": "ad79027e-b7c2-4a33-948d-676967160f6c",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
@@ -115,22 +93,55 @@
                 },
                 {
                     "name": "negative",
-                    "id": "c8719ab1-e736-4976-87da-c08e2a1ec951",
+                    "id": "116c36a5-b046-4028-9f27-b394064a1880",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "positive",
-                    "id": "346dae64-118b-4247-baaf-cd5af22582bc",
+                    "id": "addeaf86-7767-402b-a329-6d6af4e134dd",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "d2907410-568f-41ec-9632-337346af75cc",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
                     "groups": "",
+                    "action": "Turn",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "5306f7ad-a849-4e67-9db9-a53735030df3",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c853b79c-35dd-40e1-bd3c-c5a52580577d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": true

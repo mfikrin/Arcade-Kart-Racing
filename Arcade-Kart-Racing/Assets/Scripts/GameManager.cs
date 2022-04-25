@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    public bool isStartedLap = true;
+
     public int playersToBegin = 2;
     public bool gameStarted = false;
 
