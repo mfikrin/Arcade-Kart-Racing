@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +22,10 @@ public class GameManager : MonoBehaviour
 
     public int lapsToWin;
 
+    public Canvas canvas;
+
+    public int countPlayerFinish = 0;
+
     void Awake()
     {
         instance = this;
@@ -33,11 +39,21 @@ public class GameManager : MonoBehaviour
             UpdateCarRacePositions();
         }
 
+        if (cars.Count > 0)
+        {
+            canvas.gameObject.SetActive(false);
+        }
+
         if (!gameStarted && cars.Count == playersToBegin)
         {
             gameStarted = true;
             StartCountDown();
 
+        }
+
+        if (countPlayerFinish == playersToBegin)
+        {
+            SceneManager.LoadScene("EndGameScene");
         }
     }
 
@@ -90,6 +106,9 @@ public class GameManager : MonoBehaviour
     {
         if (car.curLap == lapsToWin + 1)
         {
+
+            countPlayerFinish++;
+
             for (int i = 0; i < cars.Count; i++)
             {
                 cars[i].canControl = false;
