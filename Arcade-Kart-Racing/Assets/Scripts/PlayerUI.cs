@@ -14,7 +14,8 @@ public class PlayerUI : MonoBehaviour
 
     void Update()
     {
-        carPositionText.text = "Pos "+ car.racePosition.ToString() + " / " + GameManager.instance.cars.Count.ToString();    
+        carPositionText.text = "Pos "+ car.racePosition.ToString() + " / " + GameManager.instance.cars.Count.ToString();
+        UpdateLaps(car.curLap, GameManager.instance.lapsToWin);
     }
 
     public void StartCountdownDisplay()
@@ -52,6 +53,18 @@ public class PlayerUI : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         gameOverText.color = win == true ? Color.green : Color.red;
         gameOverText.text = win == true ? "You Win" : "You Lost";
+
+        if (win)
+        {
+            EndGame.displayPlayerOne = "Player 1 : You Win";
+            EndGame.displayPlayerTwo = "Player 2 : You Lost";
+        }
+        else
+        {
+            EndGame.displayPlayerOne = "Player 1 : You Lost";
+            EndGame.displayPlayerTwo = "Player 1 : You Win";
+        }
+
     }
 
 }

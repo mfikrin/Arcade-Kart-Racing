@@ -20,7 +20,11 @@ public class TrackZone : MonoBehaviour
             {
                 if (GameManager.instance.isStartedLap)
                 {
-                    GameManager.instance.isStartedLap = false;
+                    if (GameManager.instance.playersToBegin == GameManager.instance.cars.Count)
+                    {
+                        GameManager.instance.isStartedLap = false;
+                    }
+                    
                     //Debug.Log("MASUK STARTED");
                     //car.zonesPassed = 0;
                     car.curLap++;

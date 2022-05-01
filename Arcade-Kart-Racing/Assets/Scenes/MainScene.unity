@@ -992,7 +992,7 @@ MonoBehaviour:
   - {fileID: 777309206}
   positionUpdateRate: 0.1
   isStartedLap: 1
-  playersToBegin: 1
+  playersToBegin: 2
   gameStarted: 0
   lapsToWin: 2
   canvas: {fileID: 818948248}

@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        if (countPlayerFinish == playersToBegin)
+        if (countPlayerFinish == playersToBegin-1)
         {
             SceneManager.LoadScene("EndGameScene");
         }
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         {
             uis[i].StartCountdownDisplay();
         }
-        Invoke("BeginGame", 3.0f);
+        Invoke(nameof(BeginGame), 3.0f);
     }
 
     void BeginGame()
@@ -88,18 +88,31 @@ public class GameManager : MonoBehaviour
 
     int SortPosition(CarController a, CarController b)
     {
-        if (a.zonesPassed > b.zonesPassed)
+        if (a.curLap > b.curLap)
         {
             return 1;
-        }else if (b.zonesPassed > a.zonesPassed)
+        }else if (a.curLap < b.curLap)
         {
             return -1;
         }
+        else
+        {
+            if (a.zonesPassed > b.zonesPassed)
+            {
+                return 1;
+            } else if (b.zonesPassed > a.zonesPassed)
+            {
+                return -1;
+            }
 
-        float aDist = Vector3.Distance(a.transform.position,a.curTrackZone.transform.position);
-        float bDist = Vector3.Distance(b.transform.position,b.curTrackZone.transform.position);
+            float aDist = Vector3.Distance(a.transform.position, a.curTrackZone.transform.position);
+            float bDist = Vector3.Distance(b.transform.position, b.curTrackZone.transform.position);
 
-        return aDist > bDist ? 1 : -1;
+            return aDist > bDist ? 1 : -1;
+
+        }
+
+        
     }
 
     public void CheckIsWinner(CarController car)
