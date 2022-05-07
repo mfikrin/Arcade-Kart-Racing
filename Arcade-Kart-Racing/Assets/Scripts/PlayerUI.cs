@@ -54,7 +54,7 @@ public class PlayerUI : MonoBehaviour
         gameOverText.color = win == true ? Color.green : Color.red;
         gameOverText.text = win == true ? "You Win" : "You Lost";
 
-        if (win)
+        if (win) // player 1 win
         {
             EndGame.displayPlayerOne = "Player 1 : You Win";
             EndGame.displayPlayerTwo = "Player 2 : You Lost";
@@ -62,7 +62,7 @@ public class PlayerUI : MonoBehaviour
         else
         {
             EndGame.displayPlayerOne = "Player 1 : You Lost";
-            EndGame.displayPlayerTwo = "Player 1 : You Win";
+            EndGame.displayPlayerTwo = "Player 2 : You Win";
         }
 
     }
